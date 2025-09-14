@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
-public class Telekenisis : MonoBehaviour
+public class splitmind : MonoBehaviour
 {
 
 
