@@ -66,5 +66,5 @@
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj"
     },
-    "dotnet.defaultSolution": "PBJaming-Noobs2025-UIedited.sln"
+    "dotnet.defaultSolution": "PBJaming-Noobs2025.sln"
 }
