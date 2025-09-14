@@ -33,32 +33,7 @@ public class Blockmove : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
 
         blockBody.linearVelocity = new Vector2(horizontalInput * speed, verticalInput * speed);
-        //bool success = MoveBlock(moveInput);
-
-
-    }
-    
-    /*public bool MoveBlock(Vector2 direction)
-    {
-        int count = blockBody.Cast(
-            direction,
-            movementFilter,
-            castCollision,
-            speed = Time.fixedDeltaTime * colisionOffset );
-
-        if (count == 0)
-        {
-            Vector2 moveVector = direction * speed * Time.fixedDeltaTime;
-            blockBody.MovePosition(blockBody.position + moveVector);
-            return true;
         }
-        else
-        {
-
-        }
-    }
-    */
-
     
 
     
