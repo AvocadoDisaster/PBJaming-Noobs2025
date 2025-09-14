@@ -9,10 +9,7 @@ public class Blockmove : MonoBehaviour
     public float speed;
     public Collider2D Collider2D;
     [SerializeField] private LayerMask Wall;
-    private Vector2 direction;
-    public ContactFilter2D movementFilter;
-    public float colisionOffset;
-    private List<RaycastHit2D> castCollision = new List<RaycastHit2D>();
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -33,35 +30,9 @@ public class Blockmove : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
 
         blockBody.linearVelocity = new Vector2(horizontalInput * speed, verticalInput * speed);
-        //bool success = MoveBlock(moveInput);
 
 
-    }
-    
-    /*public bool MoveBlock(Vector2 direction)
-    {
-        int count = blockBody.Cast(
-            direction,
-            movementFilter,
-            castCollision,
-            speed = Time.fixedDeltaTime * colisionOffset );
 
-        if (count == 0)
-        {
-            Vector2 moveVector = direction * speed * Time.fixedDeltaTime;
-            blockBody.MovePosition(blockBody.position + moveVector);
-            return true;
-        }
-        else
-        {
-
-        }
-    }
-    */
-
-    
-
-    
 
     private bool hitwall()
     {
