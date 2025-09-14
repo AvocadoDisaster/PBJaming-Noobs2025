@@ -2,11 +2,11 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 
 
-public class Player : MonoBehaviour
+public class Playermove : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float jumpPower;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     private BoxCollider2D boxCollider;
     [SerializeField] private LayerMask groundLayer;
     
@@ -55,6 +55,7 @@ public class Player : MonoBehaviour
             // add sound here
             }
         }
+    
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
