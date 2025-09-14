@@ -1,4 +1,5 @@
 using System.Runtime.CompilerServices;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 
@@ -10,11 +11,15 @@ public class Playermove : MonoBehaviour
     private BoxCollider2D boxCollider;
     [SerializeField] private LayerMask groundLayer;
     
+    private Animator animator;
+    public bool Isgrounded;
 
     private void Awake()
     {
+        //grab refrences
         rb = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -30,11 +35,11 @@ public class Playermove : MonoBehaviour
         }
         else if (horizontalInput < -0.01f)
         {
-            transform.localScale = new Vector3 (-1,1,1);
+            transform.localScale = new Vector3(-1, 1, 1);
         }
 
         // jump
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
         }
@@ -44,8 +49,11 @@ public class Playermove : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocityX, rb.linearVelocityY/2);
         }
+        animator.SetBool("grounded", Isgrounded);
 
     }
+
+   
 
         private void Jump()
         {
@@ -54,12 +62,17 @@ public class Playermove : MonoBehaviour
                 rb.linearVelocity = new Vector2(rb.linearVelocityX, jumpPower);
             // add sound here
             }
+             Isgrounded = false;
+        animator.SetTrigger("Jump");
         }
     
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        if (isGrounded())
+        {
+            Isgrounded = true;
+        }
     }
     private bool isGrounded()
     {
