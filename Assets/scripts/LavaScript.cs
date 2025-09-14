@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class LavaScript : MonoBehaviour
 {
     Timer lavaTimerScript;  
@@ -17,7 +17,8 @@ public class LavaScript : MonoBehaviour
     {
         if (lavaTimerScript.ReturnTimer())
         {
-            transform.position = transform.position + new Vector3(0f, riseSpeed, 0f) * Time.deltaTime;
+            SceneManager.LoadScene(2);
+            //transform.position = transform.position + new Vector3(0f, riseSpeed, 0f) * Time.deltaTime;
         }
     }
 }

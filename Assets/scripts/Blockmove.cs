@@ -33,12 +33,12 @@ public class Blockmove : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
 
         blockBody.linearVelocity = new Vector2(horizontalInput * speed, verticalInput * speed);
-        bool success = MoveBlock(moveInput)
+        //bool success = MoveBlock(moveInput);
 
 
     }
     
-    public bool MoveBlock(Vector2 direction)
+    /*public bool MoveBlock(Vector2 direction)
     {
         int count = blockBody.Cast(
             direction,
@@ -57,7 +57,7 @@ public class Blockmove : MonoBehaviour
 
         }
     }
-    
+    */
 
     
 
