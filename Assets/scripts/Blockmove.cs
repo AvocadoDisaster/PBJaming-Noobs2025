@@ -37,11 +37,6 @@ public class Blockmove : MonoBehaviour
 
     }
     
-    
-
-    
-
-    
 
     private bool hitwall()
     {
