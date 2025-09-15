@@ -7,6 +7,7 @@ public class onload : MonoBehaviour
     public GameObject moveblock;
         public GameObject map;
     public GameObject eventing;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
