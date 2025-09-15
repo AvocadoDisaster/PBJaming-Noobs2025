@@ -33,9 +33,9 @@ public class Blockmove : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
 
         blockBody.linearVelocity = new Vector2(horizontalInput * speed, verticalInput * speed);
-        }
-    
 
+
+    }
     
 
     private bool hitwall()
