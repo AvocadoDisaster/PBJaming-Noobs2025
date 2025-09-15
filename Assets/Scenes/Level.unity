@@ -230,6 +230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67a0543e0aab6654596df2a60f02d402, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  winningTag: Player
   collder: {fileID: 8538721393761113825}
 --- !u!65 &1239069684
 BoxCollider:
@@ -246,7 +247,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -514,6 +515,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6798054082989134891, guid: 869311d16a3e9364eab27cbba775df80, type: 3}
+      propertyPath: loseScene
+      value: GameOver
+      objectReference: {fileID: 0}
     - target: {fileID: 7156674260566815717, guid: 869311d16a3e9364eab27cbba775df80, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -759,6 +764,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3346351139477590322, guid: e84292d913ee19f438c9d5fc94e21a30, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3346351139477590322, guid: e84292d913ee19f438c9d5fc94e21a30, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6102081706972465079, guid: e84292d913ee19f438c9d5fc94e21a30, type: 3}
