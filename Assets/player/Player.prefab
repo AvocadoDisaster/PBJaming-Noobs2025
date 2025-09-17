@@ -252,6 +252,10 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  audioSource: {fileID: 0}
+  jumpSound: {fileID: 8300000, guid: af29459cf9af64043970ee1707b8c364, type: 3}
+  moveSound: {fileID: 0}
+  Isgrounded: 0
 --- !u!50 &6441005706235735604
 Rigidbody2D:
   serializedVersion: 5
@@ -317,7 +321,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.3, y: 0.66}
+    oldSize: {x: 4.3333335, y: 2.2}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
